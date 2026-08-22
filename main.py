@@ -14,9 +14,13 @@ async def handler(event):
     await event.reply("البوت يعمل 24/7 بنجاح ✔️")
 
 async def main():
-    # تسجيل الدخول باستخدام التوكن مباشرة بدون أي طلبات إدخال
+    # 1. الاتصال بخوادم تيليجرام أولاً
+    await client.connect()
+    
+    # 2. تسجيل الدخول بالتوكن
     await client.sign_in(bot_token=token)
-    print("...البوت يعمل الآن بصورة طبيعية...")
+    
+    print("...البوت يعمل الآن بصورة طبيعية ومتصل بنجاح...")
     await client.run_until_disconnected()
 
 if __name__ == '__main__':
