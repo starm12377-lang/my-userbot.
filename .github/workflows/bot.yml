@@ -29,6 +29,6 @@ jobs:
       env:
         API_ID: ${{ secrets.API_ID }}
         API_HASH: ${{ secrets.API_HASH }}
-        TOKEN: ${{ secrets.TOKEN }}
+        PHONE: ${{ secrets.PHONE }}
       run: |
         python3 main.py
